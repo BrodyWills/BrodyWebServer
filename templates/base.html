@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/static/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+        <title>{% block title %}{% endblock %}</title>
+    </head>
+    <body>
+        <div class="topnav">
+            <a class = "{{ 'active' if active_page == 'home' else '' }}" href="/">Home</a>
+            <a class = "{{ 'active' if active_page == 'about' else '' }} "href="about">About</a>
+            <a class = "{{ 'active' if active_page == 'contact' else '' }} "href="contact">Contact</a>
+        </div>
+        {% block content %}{% endblock %}
+    </body>
+</html>
