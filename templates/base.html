@@ -5,14 +5,22 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="/static/style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
         <title>{% block title %}{% endblock %}</title>
     </head>
     <body>
         <div class="topnav">
             <a class = "{{ 'active' if active_page == 'home' else '' }}" href="/">Home</a>
-            <a class = "{{ 'active' if active_page == 'about' else '' }} "href="about">About</a>
+            <a class = "{{ 'active' if active_page == 'projects' else '' }} "href="projects">Projects</a>
             <a class = "{{ 'active' if active_page == 'contact' else '' }} "href="contact">Contact</a>
         </div>
         {% block content %}{% endblock %}
     </body>
+	<footer>
+		<div class="social-footer">
+			<a href="https://www.facebook.com" class="fab fa-facebook"></a>
+			<a href="https://www.twitter.com" class="fab fa-twitter"></a>
+			<a href="https://www.linkedin.com" class="fab fa-linkedin-in"></a>
+		</div>
+	</footer>
 </html>

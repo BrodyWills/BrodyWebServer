@@ -1,6 +1,3 @@
-"""
-A sample Hello World server.
-"""
 import os
 import requests
 
@@ -12,6 +9,11 @@ app = Flask(__name__)
 @app.route('/')
 def hello():
     return render_template('index.html')
+
+
+@app.route('/projects')
+def projects():
+    return render_template('projects.html')
 
 
 @app.route('/contact')
