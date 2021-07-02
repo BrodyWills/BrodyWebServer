@@ -2,7 +2,6 @@ import os
 import requests
 from flask import Flask, render_template, Response
 
-
 app = Flask(__name__)
 
 
@@ -27,4 +26,4 @@ def chat():
 
 
 if __name__ == '__main__':
-    app.run(debug=False, port=8080, host='0.0.0.0')
+    app.run(debug=True, host="0.0.0.0", port=int(os.environ.get("PORT", 8080)))
