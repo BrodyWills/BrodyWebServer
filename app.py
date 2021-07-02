@@ -1,7 +1,7 @@
 import os
 import requests
+from flask import Flask, render_template, Response
 
-from flask import Flask, render_template
 
 app = Flask(__name__)
 
@@ -19,6 +19,11 @@ def projects():
 @app.route('/contact')
 def contact():
     return render_template('contact.html')
+
+
+@app.route('/chat')
+def chat():
+    return render_template('chat.html')
 
 
 if __name__ == '__main__':
